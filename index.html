@@ -2,19 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
+        <meta name="robots" content="nofollow">
+        <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
         <link href="./assets/styles/main.css" rel="stylesheet" />
-        <title>ENI - Accueil</title>
+        <link rel="canonical" href="">
+        <title>ENI École Informatique - Bienvenu à l'accueil</title>
     </head>
     <body>
         <header>
-            <img src="./assets/images/logo/logo.png" alt="Logo de l'ENI">
+            <img src="./assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
             <h1>Promo EDWM2511FT</h1>
-            <nav>
+            <nav aria-label="Menu principal">
                 <ul>
-                    <li><button>Acceuil</button></li>
-                    <li><button>Préférences</button></li>
-                    <li><button>Cartes</button></li>
-                    <li><button>Informations</button></li>
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/pages/preferences.html">Préférences</a></li>
+                    <li><a href="/pages/cartes.html">Cartes</a></li>
+                    <li><a href="/pages/informations.html">Informations</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,10 +38,11 @@
                         <th>Ville</th>
                     </tr>
                 </thead>
-                <tbody>
-                    
+                <tbody id="table-body">
+
                 </tbody>
             </table>
         </main>
+        <script src="./assets/scripts/main.js" type="module"></script>
     </body>
 </html>

@@ -1,7 +1,68 @@
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url(./fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
 body {
     margin: 0px;
+    background-color: #134A7F;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1vw 1vw 1vw 1vw;
+    background-color: #0c3154;
+    box-shadow: 0vw 1vh 5vw 5vw #00000070;
+}
+
+header h1 {
+    color: white;
+}
+
+nav {
+    margin-right: 1.5vw;
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    gap: 1vw;
+}
+
+nav li {
+    list-style-type: none;
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 5px 5px 2px black;
+
+    padding: 1vw;
     
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+nav a:hover {
+    box-shadow: 3px 3px 2px black;
+    transform: translate(2px, 2px);
+}
+
+header h1 {
+    font-family: "Inter", sans-serif;
+}
+
+nav a {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+
+    color: black;
 }
