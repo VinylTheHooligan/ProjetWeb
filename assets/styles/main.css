@@ -13,13 +13,19 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 1vw 1vw 1vw 1vw;
+    padding: 2vw;
     background-color: #0c3154;
     box-shadow: 0vw 1vh 5vw 5vw #00000070;
 }
 
 header h1 {
+    font-family: "Inter", sans-serif;
     color: white;
+}
+
+main {
+    font-family: "Inter", sans-serif;
+    padding: 2vw;
 }
 
 nav {
@@ -54,10 +60,6 @@ nav a {
 nav a:hover {
     box-shadow: 3px 3px 2px black;
     transform: translate(2px, 2px);
-}
-
-header h1 {
-    font-family: "Inter", sans-serif;
 }
 
 nav a {

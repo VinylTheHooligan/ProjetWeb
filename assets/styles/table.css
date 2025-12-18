@@ -1,0 +1,56 @@
+caption {
+    text-align: start;
+    font-size: x-large;
+    margin-block: 1vh;
+    color: white;
+}
+
+main {
+    max-height: 1vh;
+}
+
+table {
+    border-collapse: collapse;
+    border: 3px solid black;
+    overflow-y: scroll;
+
+    height: 10vw;
+
+    color: black;
+}
+
+thead {
+    background-color: grey;
+}
+
+tbody {
+    height: 1vh;
+}
+
+thead th {
+    text-align: start;
+}
+
+tbody td {
+    padding: 0.75vw 10vw 0.75vw 0.25vw;
+    text-align: start;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.detail {
+    cursor: pointer;
+
+    padding: 0vw;
+    color: darkblue;
+}
+
+.detail:hover {
+    text-decoration: underline;
+}

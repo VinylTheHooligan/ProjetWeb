@@ -119,6 +119,66 @@
         "latitude": "43.7102",
         "longitude": "7.2620"
       }
+    },
+    {
+      "id": 11,
+      "nom": "Girard",
+      "prenom": "Clara",
+      "ville": "Dijon",
+      "avatar": "image.png",
+      "anecdotes": "Adore la gastronomie bourguignonne",
+      "coordonnees": {
+        "latitude": "47.322047",
+        "longitude": "5.04148"
+      }
+    },
+    {
+      "id": 12,
+      "nom": "Marchand",
+      "prenom": "Louis",
+      "ville": "Tours",
+      "avatar": "",
+      "anecdotes": "Joue du violon depuis l’enfance",
+      "coordonnees": {
+        "latitude": "47.394144",
+        "longitude": "0.68484"
+      }
+    },
+    {
+      "id": 13,
+      "nom": "Fabre",
+      "prenom": "Alice",
+      "ville": "Clermont-Ferrand",
+      "avatar": "image.png",
+      "anecdotes": "Fan de randonnée en montagne",
+      "coordonnees": {
+        "latitude": "45.777222",
+        "longitude": "3.087025"
+      }
+    },
+    {
+      "id": 14,
+      "nom": "Chevalier",
+      "prenom": "Maxime",
+      "ville": "Grenoble",
+      "avatar": "",
+      "anecdotes": "Pratique l’escalade régulièrement",
+      "coordonnees": {
+        "latitude": "45.188529",
+        "longitude": "5.724524"
+      }
+    },
+    {
+      "id": 15,
+      "nom": "Roux",
+      "prenom": "Isabelle",
+      "ville": "Angers",
+      "avatar": "image.png",
+      "anecdotes": "Collectionne les romans graphiques",
+      "coordonnees": {
+        "latitude": "47.478419",
+        "longitude": "-0.563166"
+      }
     }
   ]
 }
