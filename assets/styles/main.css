@@ -5,7 +5,7 @@
 
 body {
     margin: 0px;
-    background-color: #134A7F;
+    background-color: #FFFFFF;
 }
 
 header {
@@ -13,19 +13,19 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 2vw;
-    background-color: #0c3154;
-    box-shadow: 0vw 1vh 5vw 5vw #00000070;
+    padding: 1vw;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #000000;
 }
 
 header h1 {
     font-family: "Inter", sans-serif;
-    color: white;
+    color: black;
 }
 
 main {
     font-family: "Inter", sans-serif;
-    padding: 2vw;
+    padding: 0vw 2vw 2vw 2vw;
 }
 
 nav {
@@ -46,20 +46,19 @@ nav li {
 nav a {
     display: block;
     background-color: white;
-    border: 3px solid black;
-    box-shadow: 5px 5px 2px black;
+    border: 2px solid black;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.666);
 
     padding: 1vw;
     
     text-align: center;
     text-decoration: none;
-    z-index: 1;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 nav a:hover {
-    box-shadow: 3px 3px 2px black;
-    transform: translate(2px, 2px);
+        box-shadow: 3px 3px 2px black;
+        transform: translate(2px, 2px);
 }
 
 nav a {

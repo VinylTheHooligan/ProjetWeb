@@ -5,9 +5,9 @@
         <meta name="robots" content="nofollow">
         <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
         <link href="./assets/styles/main.css" rel="stylesheet" />
-        <link href="./assets/styles/table.css" rel="stylesheet" />
+        <link href="./assets/styles/students.css" rel="stylesheet" />
         <link rel="canonical" href="">
-        <title>ENI École Informatique - Bienvenu à l'accueil</title>
+        <title>ENI École Informatique - Bienvenue à l'accueil</title>
     </head>
     <body>
         <header>
@@ -15,34 +15,21 @@
             <h1>Promo EDWM2511FT</h1>
             <nav aria-label="Menu principal">
                 <ul>
-                    <li><a href="/index.html">Accueil</a></li>
-                    <li><a href="/pages/preferences.html">Préférences</a></li>
-                    <li><a href="/pages/cartes.html">Cartes</a></li>
-                    <li><a href="/pages/informations.html">Informations</a></li>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./pages/preferences.html">Préférences</a></li>
+                    <li><a href="./pages/cartes.html">Cartes</a></li>
+                    <li><a href="./pages/informations.html">Informations</a></li>
                 </ul>
             </nav>
         </header>
-        <div>
-            <label for="">Type affichage</label>
-            <input type="radio" name="list" id="rad-list">
-            <label for="">Liste</label>
-            <input type="radio" name="map" id="rad-map">
-            <label for="">Cartes</label>
+        <div class="display-div">
+            <p>Type affichage</p>
+            <input type="radio" name="display" id="rad-list" checked>
+            <label for="rad-list">Liste</label>
+            <input type="radio" name="display" id="rad-grid">
+            <label for="rad-grid">Cartes</label>
         </div>
-        <main>
-            <table>
-                <caption>Liste des apprenants</caption>
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénom</th>
-                        <th>Ville</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="table-body"></tbody>
-            </table>
-        </main>
+        <main id="students-list"></main>
         <script src="./assets/scripts/main.js" type="module"></script>
     </body>
 </html>

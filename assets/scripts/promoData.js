@@ -1,7 +1,8 @@
 // export student json from promo.json
 
 export default async function DataFetch() {
-    return fetch("assets/data/promo.json")
+
+    return fetch("./promo.json")
         .then(res => res.json())
         .catch(e => console.error(e.message));
 }
