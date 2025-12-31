@@ -32,11 +32,14 @@ function LoopCard(json, grid) {
         CARD_PRENOM.textContent = apprenants.prenom;
         
         // Create and add the about button
+        const CARD_BTN_DIV = document.createElement("div");
         const CARD_DETAIL = document.createElement("button");
+        CARD_DETAIL.classList.add("detail");
         CARD_DETAIL.textContent = "Détail";
+        CARD_BTN_DIV.appendChild(CARD_DETAIL);
 
         // Set Card DIV and elements to DIV_GRID
-        CARD_DIV.append(CARD_NOM, CARD_PRENOM, CARD_DETAIL);
+        CARD_DIV.append(CARD_NOM, CARD_PRENOM, CARD_BTN_DIV);
         grid.appendChild(CARD_DIV);
     }
 }

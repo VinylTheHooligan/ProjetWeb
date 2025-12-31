@@ -4,16 +4,16 @@ caption {
     text-align: start;
     font-size: x-large;
     margin-block: 1vh;
-    color: black;
+    color: var(--border-color);
 }
 
 table {
     border-collapse: collapse;
-    border: 3px solid black;
+    border: 3px solid var(--border-color);
 
     width: 60vw;
 
-    color: black;
+    color: var(--border-color);
 }
 
 thead {
@@ -54,7 +54,7 @@ thead, tbody tr {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-right: 1.5vw;
+    margin-right: 10vw;
     margin-top: 3vh;
     gap: 0.5em;
 }
@@ -67,7 +67,7 @@ thead, tbody tr {
 .detail {
     cursor: pointer;
     padding: 0vw;
-    color: darkblue;
+    color: var(--about-color);
 }
 
 .detail:hover {
@@ -86,21 +86,23 @@ thead, tbody tr {
 
 .grid button {
     padding: 0.5vw 1vw;
-    border: 2px solid black;
-    background-color: white;
-    cursor: pointer;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);;
+    cursor: help;
 
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.666);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .grid button:hover {
-    box-shadow: 3px 3px 2px black;
+    box-shadow: 3px 3px 2px var(--border-color);
     transform: translate(2px, 2px);
+    border: 2px solid var(--about-color);
+    color: var(--about-color);
 }
 
 .card {
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 1rem;
     padding: 1vw;
 
@@ -120,4 +122,80 @@ thead, tbody tr {
 .card-prenom {
     font-size: small;
     padding-bottom: 1vh;
+}
+
+/* Modal */
+
+#modal {
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);
+    min-width: 30vw;
+    min-height: 50vh;
+    padding: 1vw;
+    gap: 3vh;
+
+    font-family: "Inter", sans-serif;
+}
+
+.modal-hidden {
+    visibility: hidden;
+}
+
+.modal-active {
+    visibility: visible;
+}
+
+#modal p {
+    margin: 0px;
+}
+
+#modal > span {
+    top: 5px;
+    right: 5px;
+
+    cursor: pointer;
+
+    padding: 0.25em 0.5em;
+    position: absolute;
+}
+
+#modal-container {
+    display: flex;
+    flex-grow: 1;
+    gap: 1.5vw;
+
+    align-items: center;
+}
+
+#modal-container > img {
+    border: 2px solid var(--border-color);
+}
+
+#modal-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3vh;
+}
+
+#modal-info div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal-container-anecdote {
+    border: 2px solid var(--border-color);
+    min-height: 15vh;
+
+    padding: 1vw;
+
+    text-align: center;
+    text-wrap: wrap;
+    align-content: center;
 }
