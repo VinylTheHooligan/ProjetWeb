@@ -13,6 +13,7 @@
 body {
     margin: 0px;
     background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
 }
 
 header {
@@ -20,18 +21,30 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 1vw;
+    padding: 1.5vw;
+    gap: 2vw;
     background-color: var(--header-color);
     box-shadow: 1px 1px 5px #000000;
 }
 
 header h1 {
-    font-family: "Inter", sans-serif;
     color: var(--border-color);
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
+
+#promo-desc {
+    margin: 0px;
+    margin-bottom: 3px;
+
+    font-size: medium;
+}
+
+#promo-count {
+    font-size: smaller;
 }
 
 main {
-    font-family: "Inter", sans-serif;
     padding: 0vw 2vw 2vw 2vw;
 }
 
@@ -69,7 +82,6 @@ nav a:hover {
 }
 
 nav a {
-    font-family: "Inter", sans-serif;
     font-weight: 600;
 
     color: var(--border-color);

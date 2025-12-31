@@ -1,9 +1,16 @@
 import DataFetch from "./promoData.js";
+import InitContext from "./contentInitializer.js";
 import StudentInit from "./accueil/studentInit.js";
 
 const JSON = await GetStudentsJSON();
 
+// retrieves the contents of promo.json (students)
+async function GetStudentsJSON() {
+    return await DataFetch();
+}
+
 function start() {
+    InitContext(JSON);
     HomePageStudents();
 }
 
@@ -15,9 +22,5 @@ function HomePageStudents() {
     StudentInit(JSON, MAIN);
 }
 
-// retrieves the contents of promo.json (students)
-async function GetStudentsJSON() {
-    return await DataFetch();
-}
-
-start();
+// start if only JSON is valid
+if (JSON) start();

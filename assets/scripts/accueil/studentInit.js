@@ -5,8 +5,10 @@ import InitModal, { UpdateModal } from "./modal.js";
 export default function StudentInit(json, main) {    
     const INPUT_LIST = document.getElementById("rad-list");
 
+    // load both list and grid display + modal
     let listDisplay = InitTable(json);
     let gridDisplay = InitGrid(json);
+    
     let modalDisplay = InitModal();
 
     main.replaceChildren(listDisplay, modalDisplay);

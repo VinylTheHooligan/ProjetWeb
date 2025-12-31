@@ -1,4 +1,8 @@
 {
+  "nomPromo": "EDWM2511FT",
+  "dateDebut": "2025-11-24",
+  "dateFin": "2026-05-22",
+  "description": "Formation intensive en développement web et mobile. Apprentissage des technologies modernes incluant HTML5, CSS3, JavaScript, TypeScript et frameworks populaires.",
   "apprenants": [
     {
       "id": 1,

@@ -15,21 +15,21 @@ export default function InitGrid(json) {
 }
 
 function LoopCard(json, grid) {
-    for (const apprenants of json.apprenants) {
+    for (const STUDENT of json.apprenants) {
         // Create the card
         const CARD_DIV = document.createElement("div");
         CARD_DIV.classList.add("card");
-        CARD_DIV.id = apprenants.id;
+        CARD_DIV.id = STUDENT.id;
 
         // Create and add the last name
         const CARD_NOM = document.createElement("p");
         CARD_NOM.classList.add("card-nom");
-        CARD_NOM.textContent = apprenants.nom.toUpperCase();
+        CARD_NOM.textContent = STUDENT.nom.toUpperCase();
 
         // Create and add the first name
         const CARD_PRENOM = document.createElement("p");
         CARD_PRENOM.classList.add("card-prenom");
-        CARD_PRENOM.textContent = apprenants.prenom;
+        CARD_PRENOM.textContent = STUDENT.prenom;
         
         // Create and add the about button
         const CARD_BTN_DIV = document.createElement("div");

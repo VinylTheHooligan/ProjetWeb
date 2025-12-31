@@ -6,13 +6,16 @@
         <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
         <link href="./assets/styles/main.css" rel="stylesheet" />
         <link href="./assets/styles/students.css" rel="stylesheet" />
-        <link rel="canonical" href="">
-        <title>ENI École Informatique - Bienvenue à l'accueil</title>
+        <title>ENI École Informatique – Promotion EDWM2511FT</title>
     </head>
     <body>
         <header>
             <img src="./assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
-            <h1>Promo EDWM2511FT</h1>
+            <div>
+                <h1 id="promo-name"><!-- Promo name --></h1>
+                <p id="promo-desc"><!-- Promo description --></p>
+                <span><strong id="promo-count"><!-- Promo members count --></strong></span>
+            </div>
             <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="./index.html">Accueil</a></li>
@@ -22,14 +25,16 @@
                 </ul>
             </nav>
         </header>
-        <div class="display-div">
+        <fieldset class="display-div">
             <p>Type affichage</p>
             <input type="radio" name="display" id="rad-list" checked>
             <label for="rad-list">Liste</label>
             <input type="radio" name="display" id="rad-grid">
             <label for="rad-grid">Cartes</label>
-        </div>
-        <main id="students-list"><!-- placeholder --></main>
+        </fieldset>
+        <main id="students-list">
+            <noscript>Activez JavaScript pour voir la liste des étudiants.</noscript>
+        </main>
         <script src="./assets/scripts/main.js" type="module"></script>
     </body>
 </html>
