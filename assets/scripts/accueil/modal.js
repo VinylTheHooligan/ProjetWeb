@@ -1,4 +1,6 @@
-export default function InitModal() {
+export default function InitModal(currentTheme) {
+
+    const DRAG_ICON = currentTheme === "sombre" ? "drag-white.svg" : "drag-black.svg";
 
     // Create main modal wrapper
     const MODAL = document.createElement("div");
@@ -8,6 +10,11 @@ export default function InitModal() {
     // Create close button
     const CLOSE_BTN = document.createElement("span");
     CLOSE_BTN.textContent = 'X';
+
+    // Create drag button
+    const DRAG_BTN = document.createElement("img");
+    DRAG_BTN.src = `./assets/images/icons/${DRAG_ICON}`;
+    DRAG_BTN.id = "drag";
 
     // Create container for avatar + info
     const MODAL_CONTAINER = document.createElement("div");

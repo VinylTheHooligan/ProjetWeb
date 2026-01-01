@@ -33,19 +33,12 @@ header h1 {
     margin-bottom: 2vh;
 }
 
-#promo-desc {
-    margin: 0px;
-    margin-bottom: 3px;
-
-    font-size: medium;
-}
-
-#promo-count {
-    font-size: smaller;
-}
-
 main {
     padding: 0vw 2vw 2vw 2vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav {
@@ -63,7 +56,7 @@ nav li {
     flex: 1;
 }
 
-nav a {
+nav a, #return-home {
     display: block;
     background-color: var(--background-color);
     border: 2px solid var(--border-color);
@@ -76,13 +69,18 @@ nav a {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-nav a:hover {
+nav a:hover, #return-home:hover {
     box-shadow: 3px 3px 2px var(--border-color);
     transform: translate(2px, 2px);
 }
 
-nav a {
+nav a, #return-home {
     font-weight: 600;
 
     color: var(--border-color);
+}
+
+#return-home {
+    width: fit-content;
+    margin-top: 5vh;
 }

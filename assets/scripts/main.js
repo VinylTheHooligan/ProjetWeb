@@ -1,6 +1,6 @@
 import DataFetch from "./promoData.js";
-import InitContext from "./contentInitializer.js";
 import StudentInit from "./accueil/studentInit.js";
+import InfoContextInitializer from "./informations/infoContextInitializer.js";
 
 const JSON = await GetStudentsJSON();
 
@@ -10,16 +10,26 @@ async function GetStudentsJSON() {
 }
 
 function start() {
-    InitContext(JSON);
-    HomePageStudents();
+    const CURRENT_PAGE = document.body.getAttribute("data-page");
+
+    // Set the promo name to the H1 in header
+    const PROMO_TITLE = document.getElementById("promo-name");
+    PROMO_TITLE.textContent = `Promo ${JSON.nomPromo}`;
+    
+    PageSelector(CURRENT_PAGE);
 }
 
-// initializes students according to choice (list or grid)
-function HomePageStudents() {
-    const MAIN = document.getElementById("students-list");
-    if (!MAIN) return console.log("studentInit.js not executed. Home page not selected");
+// initiates instructions for the right page
+function PageSelector(page) {
+    switch (page) {
+        case "home":
+            StudentInit(JSON);
+            break;
 
-    StudentInit(JSON, MAIN);
+        case "info":
+            InfoContextInitializer(JSON);
+            break;
+    }
 }
 
 // start if only JSON is valid

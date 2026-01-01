@@ -2,24 +2,55 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link href="./assets/styles/main.css" rel="stylesheet" />
-        <title>ENI - Informations</title>
+        <meta name="robots" content="nofollow">
+        <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
+        <link href="/assets/styles/main.css" rel="stylesheet" />
+        <link href="/assets/styles/info.css" rel="stylesheet" />
+        <title>ENI École Informatique – Informations</title>
     </head>
-    <body>
+    <body data-page="info">
         <header>
-            <img src="./assets/images/logo/logo.png" alt="Logo de l'ENI">
-            <h1>Promo EDWM2511FT</h1>
-            <nav>
+            <img src="/assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
+            <div>
+                <h1 id="promo-name"><!-- Promo name --></h1>
+            </div>
+            <nav aria-label="Menu principal">
                 <ul>
-                    <li><button>Acceuil</button></li>
-                    <li><button>Préférences</button></li>
-                    <li><button>Cartes</button></li>
-                    <li><button>Informations</button></li>
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/pages/preferences.html">Préférences</a></li>
+                    <li><a href="/pages/cartes.html">Cartes</a></li>
+                    <li><a href="/pages/informations.html">Informations</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-           
+            <div id="master-container">
+                <div id="main-info">
+                    <h2>* INFORMATIONS GENERALES *</h1>
+                    <h4 id="promo-date"><!-- Promo date --></h4>
+                    <h4 id="promo-count"><!-- Student count in promo --></h4>
+                </div>
+                <div id="main-div-container">
+                    <div>
+                        <span>Description</span>
+                        <div class="info-border">
+                            <p id="promo-desc"><!-- Promo desc --></p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Liens utiles</span>
+                        <div class="info-border">
+                            <a href="https://www.eni.fr/">Site de l'ENI</a>
+                            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN Web Docs – JavaScript</a>
+                            <a href="https://javascript.info/">JavaScript.info</a>
+                            <a href="https://scrimba.com/learn-javascript-c0v">Scrimba</a>
+                            <a href="https://www.youtube.com/@BroCodez">Brocode (YTB)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="return-home" href="/index.html">Retour à la page d'Accueil</a>
         </main>
+        <script src="/assets/scripts/main.js" type="module"></script>
     </body>
 </html>

@@ -12,6 +12,7 @@ table {
     border: 3px solid var(--border-color);
 
     width: 60vw;
+    align-self: self-start;
 
     color: var(--border-color);
 }
