@@ -4,9 +4,14 @@
 }
 
 :root {
-    --background-color: white;
-    --header-color: white;
-    --border-color: black;
+    --back-color: #f7f7f7;
+    --med-color: #e0e0e0;
+    --light-med-color: #f0f0f0;
+    --front-color: #1a1a1a;
+
+    --background-color: var(--back-color);
+    --header-color: var(--back-color);
+    --border-color: var(--front-color);
     --about-color: darkblue;
 }
 
@@ -14,6 +19,7 @@ body {
     margin: 0px;
     background-color: var(--background-color);
     font-family: "Inter", sans-serif;
+    color: var(--border-color);
 }
 
 header {

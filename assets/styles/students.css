@@ -18,7 +18,7 @@ table {
 }
 
 thead {
-    background-color: grey;
+    background-color: var(--med-color);
 }
 
 tbody {
@@ -37,11 +37,11 @@ tbody td {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 tbody tr:nth-child(even) {
-    background-color: lightgray;
+    background-color: var(--light-med-color);
 }
 
 thead, tbody tr {
