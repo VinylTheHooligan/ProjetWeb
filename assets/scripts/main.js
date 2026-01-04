@@ -1,5 +1,5 @@
 import DataFetch from "./promoData.js";
-import { StorageInit, ThemeInit } from "./storageManager.js";
+import { DisplayInit, PreferenceInit } from "./storageManager.js";
 import StudentInit from "./accueil/studentInit.js";
 import InfoContextInitializer from "./informations/infoContextInitializer.js";
 
@@ -20,21 +20,20 @@ function start() {
     PageSelector(CURRENT_PAGE);
 }
 
-// initiates instructions for the right page
+// script routing
 function PageSelector(page) {
     switch (page) {
         case "home":
             StudentInit(JSON); // run first
-            StorageInit();
+            DisplayInit();
             break;
 
         case "pref":
-            ThemeInit();
+            PreferenceInit();
             break;
 
         case "info":
             InfoContextInitializer(JSON);
-            ThemeInit();
             break;
     }
 }

@@ -2,40 +2,60 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link href="./assets/styles/main.css" rel="stylesheet" />
-        <title>ENI - Informations</title>
+        <script>
+            (function() {
+                const theme = localStorage.getItem("theme");
+                if (theme === "dark") {
+                    document.documentElement.classList.add("dark");
+                }
+            })();
+        </script>
+        <link href="/assets/styles/main.css" rel="stylesheet" />
+        <link href="/assets/styles/pref.css" rel="stylesheet" />
+        <title>ENI École Informatique – Préférences</title>
     </head>
-    <body>
+    <body data-page="pref">
         <header>
-            <img src="./assets/images/logo/logo.png" alt="Logo de l'ENI">
-            <h1>Promo EDWM2511FT</h1>
-            <nav>
+            <img src="/assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
+            <h1 id="promo-name"><!-- Promo name --></h1>
+            <nav aria-label="Menu principal">
                 <ul>
-                    <li><button>Acceuil</button></li>
-                    <li><button>Préférences</button></li>
-                    <li><button>Cartes</button></li>
-                    <li><button>Informations</button></li>
+                    <li><a href="/index.html">Accueil</a></li>
+                    <li><a href="/pages/preferences.html">Préférences</a></li>
+                    <li><a href="/pages/cartes.html">Cartes</a></li>
+                    <li><a href="/pages/informations.html">Informations</a></li>
                 </ul>
             </nav>
         </header>
         <main>
            <fieldset>
                 <legend>Préférences du site</legend>
-                <form action="">
-                    <label for="theme">Thème du site</label>
-                    <select name="theme" id="theme">
-                        <option value="light">Clair</option>
-                        <option value="dark">Sombre</option>
-                    </select>
-
-                    <label for="">Format d'affichage de la liste des apprenants</label>
-                    <input type="radio" name="list" id="radio-list">
-                    <label for="">Liste (Table)</label>
-
-                    <input type="radio" name="grid" id="radio-grid">
-                    <label for="">Cartes (Grid)</label>
+                <form id="settings-form">
+                    <div id="grid-container-form">
+                        <label for="theme">Thème du site</label>
+                        <select name="theme" id="theme">
+                            <option value="light">Clair</option>
+                            <option value="dark">Sombre</option>
+                        </select>
+                        <label>Format d'affichage de la liste des apprenants</label>
+                        <div id="radio-display">
+                            <div>
+                                <input type="radio" name="radio-display" id="radio-list">
+                                <label for="radio-list">Liste (Table)</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="radio-display" id="radio-grid">
+                                <label for="radio-grid">Cartes (Grid)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="button-container">
+                        <a class="return-home" href="/index.html">Retour à la page d'Accueil</a>
+                        <button class="return-home" id="submit-preferences" type="submit">Enregistrer</a>
+                    </div>
                 </form>
            </fieldset>
         </main>
+        <script src="/assets/scripts/main.js" type="module"></script>
     </body>
 </html>

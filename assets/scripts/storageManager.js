@@ -1,65 +1,102 @@
 // for home page
-export function StorageInit() {
-    ThemeInit();
-    DisplayInit();
-}
-
-// triggers the theme initialization 
-export function ThemeInit() {
-    const THEME = GetOrSetDefault("theme", "light");
-    UpdateTheme(THEME);
-}
-
-function DisplayInit() {
+export function DisplayInit() {
     const DISPLAY_INIT = GetOrSetDefault("displayType", "list");
-    UpdateDisplay(DISPLAY_INIT);
-}
-
-function UpdateTheme(currentTheme) {
-    const THEMES = {
-        light: {
-            "--back-color": "#f7f7f7",
-            "--med-color": "#e0e0e0", 
-            "--light-med-color": "#f0f0f0",
-            "--front-color": "#1a1a1a"
-        },
-        dark: {
-            "--back-color": "#0f1115",
-            "--med-color": "#134a7f",
-            "--light-med-color": "#1a1f26", 
-            "--front-color": "#e6e6e6"
-        }
-    }
-
-    const SELECTED_THEME = THEMES[currentTheme] || THEMES.light;
-
-    Object.entries(SELECTED_THEME).forEach(([property, value]) => {
-        document.documentElement.style.setProperty(property, value);
-    });
-}
-
-function UpdateDisplay(displayType) {
     const LIST_RADIO = document.getElementById("rad-list");
     const GRID_RADIO = document.getElementById("rad-grid");
 
-    if (displayType === "grid" && GRID_RADIO) {
-        GRID_RADIO.checked = true;
+    if (DISPLAY_INIT === "grid" && GRID_RADIO) {
+        GRID_RADIO.click();
     } else if (LIST_RADIO) {
-        LIST_RADIO.checked = true;
+        LIST_RADIO.click();
     }
+}
+
+export function PreferenceInit() {
+    const SELECT_THEME = document.getElementById("theme");
+    const SUBMIT = document.getElementById("settings-form");
+
+    const CURRENT_THEME = GetLocalStorageKey("theme");
+    let currentDisplay = GetLocalStorageKey("displayType");
+    if (!currentDisplay) GetOrSetDefault("displayType", "list");
+
+    const RADIO_LIST = document.getElementById("radio-list");
+    const RADIO_GRID = document.getElementById("radio-grid");
+    const RADIOS = [RADIO_LIST, RADIO_GRID];
+
+    let currentRadioChecked;
+
+    if (currentDisplay && currentDisplay === "list") {
+        RADIO_LIST.checked = true;
+        currentRadioChecked = "list";
+    } else if (currentDisplay && currentDisplay === "grid") {
+        RADIO_GRID.checked = true;
+        currentRadioChecked = "grid";
+    }
+
+    RADIOS.forEach(radio => {
+        radio.addEventListener("change", () => {
+            if (radio.checked && radio === RADIO_LIST) currentRadioChecked = "list";
+            else if (radio.checked && radio === RADIO_GRID) currentRadioChecked = "grid";
+        });
+    })
+
+    SELECT_THEME.value = CURRENT_THEME ?? "light";
+
+    SELECT_THEME.addEventListener("change", () => {
+        UpdateTheme(SELECT_THEME.value);
+    })
+
+    SUBMIT.addEventListener("submit", (e) => {
+        SetLocalStorageKey("theme", SELECT_THEME.value);
+        SetLocalStorageKey("displayType", currentRadioChecked);
+    });
+    
+}
+
+// only on home page
+function UpdateDisplay(displayType) {
+    
 }
 
 // search in localstorage, return its content, and set a default if nothing is found
 function GetOrSetDefault(key, defaultValue) {
-    try {
-        let value = localStorage.getItem(key);
-        if (!value) {
-            localStorage.setItem(key, defaultValue); // set theme/list by default
-            value = defaultValue;
+    let value = GetLocalStorageKey(key);
+    if (value === null || value === undefined) {
+        SetLocalStorageKey(key, defaultValue); // set theme/list by default
+        value = defaultValue;
+    }
+    return value;
+}
+
+function GetLocalStorageKey(key) {
+    const ALLOWED = [
+        "theme",
+        "displayType"
+    ];
+
+    if (ALLOWED.includes(key)) {
+        try {
+            return localStorage.getItem(key);
+        } catch (error) {
+            console.warn(`Erreur dans LocalStorage : ${error.message}`);
         }
-        return value;
-    } catch (error) {
-        console.warn(`Erreur dans LocalStorage : ${error.message}`);
-        return defaultValue;
+    }
+    return null;
+}
+
+function SetLocalStorageKey(key, value) {
+    const ALLOWED = {
+        theme: ["light", "dark"],
+        displayType: ["list", "grid"]
+    };
+
+    if (ALLOWED[key]?.includes(value)) {
+        try {
+            localStorage.setItem(key, value);
+        } catch (error) {
+            console.warn(`Erreur dans LocalStorage : ${error.message}`);
+        }
+    } else {
+        console.warn(`Valeur "${value}" non autorisée pour "${key}".`);
     }
 }

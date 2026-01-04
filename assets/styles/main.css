@@ -15,6 +15,13 @@
     --about-color: darkblue;
 }
 
+:root.dark {
+    --back-color: #0f1115;
+    --med-color: #134a7f;
+    --light-med-color: #1a1f26;
+    --front-color: #e6e6e6;
+}
+
 body {
     margin: 0px;
     background-color: var(--background-color);
@@ -86,7 +93,10 @@ nav a, #return-home {
     color: var(--border-color);
 }
 
-#return-home {
+.return-home {
     width: fit-content;
     margin-top: 5vh;
+
+    cursor: pointer;
+    font-size: large;
 }
