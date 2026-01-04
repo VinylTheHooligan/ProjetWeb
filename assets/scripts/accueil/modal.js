@@ -98,10 +98,10 @@ export function UpdateModal(json, input) {
     const apprenant = json.apprenants[id - 1];
     
     const fields = {
-        "modal-nom": apprenant.nom,
-        "modal-prenom": apprenant.prenom,
-        "modal-ville": apprenant.ville,
-        "modal-anecdote": apprenant.anecdotes
+        "modal-nom": apprenant.nom ?? "???",
+        "modal-prenom": apprenant.prenom ?? "???",
+        "modal-ville": apprenant.ville ?? "???",
+        "modal-anecdote": apprenant.anecdotes ?? "???"
     };
 
     for (const [id, value] of Object.entries(fields)) {

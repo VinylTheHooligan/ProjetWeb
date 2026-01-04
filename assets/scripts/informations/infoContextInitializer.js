@@ -8,7 +8,7 @@ export default function InfoContextInitializer(json) {
     const STUDENTS_COUNT = json.apprenants.length;
     const DESC = json.description;
 
-    PROMO_DATE.textContent = `Formation du ${DATE_DEBUT} au ${DATE_FIN}`;
-    PROMO_COUNT.textContent = `Nombre d'apprenants: ${STUDENTS_COUNT}`;
-    PROMO_DESC.textContent = DESC;
+    PROMO_DATE.textContent = `Formation du ${DATE_DEBUT ?? "???"} au ${DATE_FIN ?? "???"}`;
+    PROMO_COUNT.textContent = `Nombre d'apprenants: ${STUDENTS_COUNT ?? "???"}`;
+    PROMO_DESC.textContent = DESC ?? "???";
 }

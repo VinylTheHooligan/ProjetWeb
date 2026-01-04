@@ -98,5 +98,6 @@ function SetLocalStorageKey(key, value) {
         }
     } else {
         console.warn(`Valeur "${value}" non autorisée pour "${key}".`);
+        localStorage.setItem(key, key[0]);
     }
 }

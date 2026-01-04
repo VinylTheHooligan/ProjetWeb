@@ -5,7 +5,7 @@ export default function InitTable(json) {
     let tabBody = tab.querySelector("#table-body");
     
     // Set rows in tab
-    for (const STUDENT of json.apprenants) {
+    for (const STUDENT of json?.apprenants) {
         tabBody.appendChild(createRow(STUDENT));
     }
 
@@ -51,9 +51,9 @@ function createRow(student) {
     const TD_DETAIL = document.createElement("td");
 
     // Set content in cells
-    TD_NOM.textContent = student.nom.toUpperCase();
-    TD_PRENOM.textContent = student.prenom;
-    TD_VILLE.textContent = student.ville;
+    TD_NOM.textContent = student.nom.toUpperCase() ?? "???";
+    TD_PRENOM.textContent = student.prenom ?? "???";
+    TD_VILLE.textContent = student.ville ?? "???";
 
     const TD_DETAIL_DIV = document.createElement("div");
     TD_DETAIL_DIV.classList.add("detail");

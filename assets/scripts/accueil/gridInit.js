@@ -24,12 +24,12 @@ function LoopCard(json, grid) {
         // Create and add the last name
         const CARD_NOM = document.createElement("p");
         CARD_NOM.classList.add("card-nom");
-        CARD_NOM.textContent = STUDENT.nom.toUpperCase();
+        CARD_NOM.textContent = STUDENT.nom.toUpperCase() ?? "???";
 
         // Create and add the first name
         const CARD_PRENOM = document.createElement("p");
         CARD_PRENOM.classList.add("card-prenom");
-        CARD_PRENOM.textContent = STUDENT.prenom;
+        CARD_PRENOM.textContent = STUDENT.prenom ?? "???";
         
         // Create and add the about button
         const CARD_BTN_DIV = document.createElement("div");

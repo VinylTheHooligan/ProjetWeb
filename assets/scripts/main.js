@@ -16,7 +16,7 @@ function start() {
 
     // Set the promo name to the H1 in header
     const PROMO_TITLE = document.getElementById("promo-name");
-    PROMO_TITLE.textContent = `Promo ${JSON.nomPromo}`;
+    PROMO_TITLE.textContent = `Promo ${JSON.nomPromo ?? ""}`;
     
     PageSelector(CURRENT_PAGE);
 }
