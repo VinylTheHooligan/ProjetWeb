@@ -4,16 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="robots" content="nofollow">
         <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
-        <script>
-            (function() {
-                const theme = localStorage.getItem("theme");
-                if (theme === "dark") {
-                    document.documentElement.classList.add("dark");
-                }
-            })();
-        </script>
-        <link href="/assets/styles/main.css" rel="stylesheet" />
-        <link href="/assets/styles/info.css" rel="stylesheet" />
+        <script>(function() { const theme = localStorage.getItem("theme"); if (theme === "dark") document.documentElement.classList.add("dark"); })()</script>
+        <link href="assets/styles/main.css" rel="stylesheet" />
+        <link href="assets/styles/info.css" rel="stylesheet" />
         <title>ENI École Informatique – Informations</title>
     </head>
     <body data-page="info">
@@ -57,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <a id="return-home" href="/index.html">Retour à la page d'Accueil</a>
+            <a class="return-home" href="/index.html">Retour à la page d'Accueil</a>
         </main>
         <script src="/assets/scripts/main.js" type="module"></script>
     </body>

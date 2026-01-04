@@ -2,16 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <script>
-            (function() {
-                const theme = localStorage.getItem("theme");
-                if (theme === "dark") {
-                    document.documentElement.classList.add("dark");
-                }
-            })();
-        </script>
-        <link href="/assets/styles/main.css" rel="stylesheet" />
-        <link href="/assets/styles/pref.css" rel="stylesheet" />
+        <script>(function() { const theme = localStorage.getItem("theme"); if (theme === "dark") document.documentElement.classList.add("dark"); })()</script>
+        <link href="assets/styles/main.css" rel="stylesheet" />
+        <link href="assets/styles/pref.css" rel="stylesheet" />
         <title>ENI École Informatique – Préférences</title>
     </head>
     <body data-page="pref">

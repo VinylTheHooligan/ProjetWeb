@@ -6,13 +6,17 @@
         <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
         <script>(function() { const theme = localStorage.getItem("theme"); if (theme === "dark") document.documentElement.classList.add("dark"); })()</script>
         <link href="assets/styles/main.css" rel="stylesheet" />
-        <link href="assets/styles/students.css" rel="stylesheet" />
-        <title>ENI École Informatique – Promotion EDWM2511FT</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <link rel="stylesheet" href="assets/styles/cartes.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <title>ENI École Informatique – Cartes</title>
     </head>
-    <body data-page="home">
+    <body data-page="map">
         <header>
             <img src="/assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
-            <h1 id="promo-name"><!-- Promo name --></h1>
+            <div>
+                <h1 id="promo-name"><!-- Promo name --></h1>
+            </div>
             <nav aria-label="Menu principal">
                 <ul>
                     <li><a href="/index.html">Accueil</a></li>
@@ -22,15 +26,9 @@
                 </ul>
             </nav>
         </header>
-        <fieldset class="display-div">
-            <p>Type affichage</p>
-            <input type="radio" name="display" id="rad-list" checked>
-            <label for="rad-list">Liste</label>
-            <input type="radio" name="display" id="rad-grid">
-            <label for="rad-grid">Cartes</label>
-        </fieldset>
-        <main id="students-list">
-            <noscript>Activez JavaScript pour voir la liste des étudiants.</noscript>
+        <main>
+            <div id="map"></div>
+            <a class="return-home" href="/index.html">Retour à la page d'Accueil</a>
         </main>
         <script src="/assets/scripts/main.js" type="module"></script>
     </body>

@@ -2,6 +2,7 @@ import DataFetch from "./promoData.js";
 import { DisplayInit, PreferenceInit } from "./storageManager.js";
 import StudentInit from "./accueil/studentInit.js";
 import InfoContextInitializer from "./informations/infoContextInitializer.js";
+import MapInit from "./cartes/mapInit.js";
 
 const JSON = await GetStudentsJSON();
 
@@ -30,6 +31,10 @@ function PageSelector(page) {
 
         case "pref":
             PreferenceInit();
+            break;
+
+        case "map":
+            MapInit(JSON);
             break;
 
         case "info":
