@@ -2,7 +2,7 @@
 
 export default async function DataFetch() {
     try {
-        const RESPONSE = await fetch("/promo.json");
+        const RESPONSE = await fetch("promo.json");
 
         // HTTP status
         if (!RESPONSE.ok) throw new Error(`Erreur serveur : ${RESPONSE.status} ${RESPONSE.statusText}`);
