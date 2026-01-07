@@ -200,7 +200,7 @@ thead, tbody tr {
     align-content: center;
 }
 
-/* Responsive */
+/* Responsive List */
 
 /* Tablet */
 
@@ -265,5 +265,23 @@ thead, tbody tr {
     .display-div {
         font-size: small;
         justify-content: center;
+    }
+}
+
+
+/* Responsive Card */
+
+@media (max-width: 426px) {
+    main {
+        margin-inline: 4vw;
+    }
+
+    .master > h2 {
+        text-align: center;
+    }
+
+    .card {
+        width: 25%;
+        padding-bottom: 2vh;
     }
 }

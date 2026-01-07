@@ -5,3 +5,23 @@
 
     border: 2px solid var(--front-color);
 }
+
+@media (max-width: 1025px) and (min-width: 427px){
+    #map {
+        width: 60vw;
+        height: 60vh;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 426px){
+    #map {
+        width: 80vw;
+        height: 60vh;
+        margin-top: 10vh;
+    }
+
+    main {
+        margin-bottom: 5vh;
+    }
+}

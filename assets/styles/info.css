@@ -51,3 +51,39 @@
 .info-border a {
     width: fit-content;
 }
+
+@media (max-width: 1025px) {
+    #main-div-container {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1025px) and (min-width: 711px) {
+    #main-div-container {
+        width: 75%;
+    }
+}
+
+@media (max-width: 710px) {
+    #main-div-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-border {
+        padding-block: 5vh;
+    }
+
+    main {
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 426px) {
+    #main-info h2 {
+        font-size: 5vw;
+    }
+
+    #main-info h4 {
+        font-size: 4vw;
+    }
+}
