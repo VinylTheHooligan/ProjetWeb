@@ -1,7 +1,0 @@
-#map {
-    width: 50vw;
-    height: 50vh;
-    margin-top: 10vh;
-
-    border: 2px solid var(--front-color);
-}
