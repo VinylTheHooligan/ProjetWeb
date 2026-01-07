@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Recensement des élèves de la promotion EDWM2511FT de la formation Développeur Web & Web Mobile. Découvrez leurs informations, contacts et adresses.">
         <script>(function() { const theme = localStorage.getItem("theme"); if (theme === "dark") document.documentElement.classList.add("dark"); })()</script>
         <link href="assets/styles/main.css" rel="stylesheet" />
@@ -13,8 +14,8 @@
     </head>
     <body data-page="map">
         <header>
-            <img src="assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
-            <div>
+            <div class="logo-title">
+                <img src="assets/images/logo/logo.png" alt="Logo de l'ENI École Informatique">
                 <h1 id="promo-name"><!-- Promo name --></h1>
             </div>
             <nav aria-label="Menu principal">
@@ -28,6 +29,7 @@
         </header>
         <main>
             <div id="map"></div>
+            <noscript>Activez JavaScript pour voir la carte.</noscript>
             <a class="return-home" href="index.html">Retour à la page d'Accueil</a>
         </main>
         <script src="assets/scripts/main.js" type="module"></script>

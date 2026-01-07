@@ -1,4 +1,4 @@
-// for home page
+// for home page, set the display type according to localstorage value
 export function DisplayInit() {
     const DISPLAY_INIT = GetOrSetDefault("displayType", "list");
     const LIST_RADIO = document.getElementById("rad-list");
@@ -11,6 +11,7 @@ export function DisplayInit() {
     }
 }
 
+// Initializes the preferences page
 export function PreferenceInit() {
     const SELECT_THEME = document.getElementById("theme");
     const SUBMIT = document.getElementById("settings-form");
@@ -50,11 +51,6 @@ export function PreferenceInit() {
         SetLocalStorageKey("theme", SELECT_THEME.value);
         SetLocalStorageKey("displayType", currentRadioChecked);
     });
-    
-}
-
-// only on home page
-function UpdateDisplay(displayType) {
     
 }
 

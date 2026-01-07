@@ -1,21 +1,21 @@
 import InitTable from "./tableInit.js";
 import InitGrid from "./gridInit.js";
-import InitModal, { UpdateModal } from "./modal.js";
+import { InitModal, UpdateModal } from "./modal.js";
 
 export default function StudentInit(json) {
     const MAIN = document.getElementById("students-list");
     const INPUT_LIST = document.getElementById("rad-list");
 
     // load both list and grid display + modal
-    let listDisplay = InitTable(json);
-    let gridDisplay = InitGrid(json);
+    const LIST_DISPLAY = InitTable(json);
+    const GRID_DISPLAY = InitGrid(json);
 
-    let modalDisplay = InitModal();
+    const MODAL_DISPLAY = InitModal();
 
-    MAIN.replaceChildren(listDisplay, modalDisplay);
+    MAIN.replaceChildren(LIST_DISPLAY, MODAL_DISPLAY);
 
     document.querySelectorAll('input[type="radio"]').forEach(input => {
-        input.addEventListener("change", UpdateDisplay);
+        input.addEventListener("click", UpdateDisplay);
     });
 
     MAIN.addEventListener("click", (e) => {
@@ -25,8 +25,8 @@ export default function StudentInit(json) {
     });
 
     function UpdateDisplay() {
-        const display = INPUT_LIST.checked ? listDisplay : gridDisplay;
-        MAIN.replaceChildren(display, modalDisplay);
+        const DISPLAY = INPUT_LIST.checked ? LIST_DISPLAY : GRID_DISPLAY;
+        MAIN.replaceChildren(DISPLAY, MODAL_DISPLAY);
     }
 
     UpdateDisplay();

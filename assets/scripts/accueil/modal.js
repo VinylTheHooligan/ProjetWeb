@@ -1,4 +1,4 @@
-export default function InitModal(currentTheme) {
+export function InitModal(currentTheme) {
 
     const DRAG_ICON = currentTheme === "sombre" ? "drag-white.svg" : "drag-black.svg";
 

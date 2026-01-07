@@ -137,8 +137,8 @@ thead, tbody tr {
     flex-direction: column;
     border: 2px solid var(--border-color);
     background-color: var(--background-color);
-    min-width: 320px;
-    min-height: 250px;
+    min-width: 30vw;
+    min-height: 50vh;
     padding: 1vw;
     gap: 3vh;
 }
@@ -198,72 +198,4 @@ thead, tbody tr {
     text-align: center;
     text-wrap: wrap;
     align-content: center;
-}
-
-/* Responsive */
-
-/* Tablet */
-
-@media (max-width: 1250px) and (min-width: 769px) {
-
-    caption {
-        text-align: center;
-    }
-
-    table {
-        width: 80vw;
-        align-self: center;
-    }
-
-    tbody {
-        height: 29vh;
-    }
-
-    .display-div {
-        font-size: larger;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 390px) {
-
-    caption {
-        text-align: center;
-    }
-
-    table {
-        width: 90vw;
-        align-self: center;
-    }
-
-    tbody {
-        height: 29vh;
-    }
-
-
-    .display-div {
-        font-size: larger;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 389px) {
-    caption {
-        text-align: center;
-    }
-
-    table {
-        width: 95vw;
-        align-self: center;
-        font-size: small;
-    }
-
-    tbody {
-        height: 29vh;
-    }
-
-
-    .display-div {
-        font-size: small;
-        justify-content: center;
-    }
 }

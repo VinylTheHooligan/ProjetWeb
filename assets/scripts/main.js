@@ -13,7 +13,7 @@ async function GetStudentsJSON() {
 
 function start() {
     const CURRENT_PAGE = document.body.getAttribute("data-page");
-
+    
     // Set the promo name to the H1 in header
     const PROMO_TITLE = document.getElementById("promo-name");
     PROMO_TITLE.textContent = `Promo ${JSON.nomPromo ?? ""}`;
