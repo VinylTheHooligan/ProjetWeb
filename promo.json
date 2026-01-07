@@ -183,6 +183,18 @@
         "latitude": "47.478419",
         "longitude": "-0.563166"
       }
+    },
+    {
+      "id": 16,
+      "nom": "Vanhille",
+      "prenom": "Hugo",
+      "ville": "Dunkerque",
+      "avatar": "avatar.png",
+      "anecdotes": "Aime les lapin bélier",
+      "coordonnees": {
+        "latitude": "51.0329700",
+        "longitude": "2.3770000"
+      }
     }
   ]
 }
