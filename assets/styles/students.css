@@ -284,6 +284,10 @@ thead, tbody tr {
         width: 25%;
         padding-bottom: 2vh;
     }
+
+    .card-nom {
+        font-size: 3vw;
+    }
 }
 
 /* MODAL Responsive */
