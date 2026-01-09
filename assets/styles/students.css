@@ -285,3 +285,12 @@ thead, tbody tr {
         padding-bottom: 2vh;
     }
 }
+
+/* MODAL Responsive */
+
+@media (max-width: 426px) {
+    #modal {
+        font-size: 4vw;
+        min-width: 300px;
+    }
+}

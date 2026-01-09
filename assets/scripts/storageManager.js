@@ -34,20 +34,16 @@ export function PreferenceInit() {
         currentRadioChecked = "grid";
     }
 
+    SELECT_THEME.value = CURRENT_THEME ?? "light";
+
     RADIOS.forEach(radio => {
         radio.addEventListener("change", () => {
             if (radio.checked && radio === RADIO_LIST) currentRadioChecked = "list";
             else if (radio.checked && radio === RADIO_GRID) currentRadioChecked = "grid";
         });
-    })
+    });
 
-    SELECT_THEME.value = CURRENT_THEME ?? "light";
-
-    SELECT_THEME.addEventListener("change", () => {
-        UpdateTheme(SELECT_THEME.value);
-    })
-
-    SUBMIT.addEventListener("submit", (e) => {
+    SUBMIT.addEventListener("submit", () => {
         SetLocalStorageKey("theme", SELECT_THEME.value);
         SetLocalStorageKey("displayType", currentRadioChecked);
     });
