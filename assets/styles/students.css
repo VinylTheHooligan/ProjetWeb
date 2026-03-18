@@ -50,6 +50,8 @@ thead, tbody tr {
     table-layout: fixed;
 }
 
+
+
 .display-div {
     display: flex;
     align-items: flex-start;
@@ -272,7 +274,7 @@ thead, tbody tr {
 /* Responsive Card */
 
 @media (max-width: 426px) {
-    main {
+    section {
         margin-inline: 4vw;
     }
 

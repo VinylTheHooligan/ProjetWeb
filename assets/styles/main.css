@@ -47,7 +47,7 @@ header h1 {
     text-align: center  ;
 }
 
-main {
+section {
     padding: 0vw 2vw 2vw 2vw;
 
     display: flex;

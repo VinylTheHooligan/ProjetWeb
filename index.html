@@ -25,14 +25,17 @@
                 </ul>
             </nav>
         </header>
-        <fieldset class="display-div">
-            <p>Type affichage</p>
-            <input type="radio" name="display" id="rad-list" checked>
-            <label for="rad-list">Liste</label>
-            <input type="radio" name="display" id="rad-grid">
-            <label for="rad-grid">Cartes</label>
-        </fieldset>
-        <main id="students-list">
+        <div class="display-div">
+            <fieldset>
+                <legend>Type affichage</legend>
+                <input type="radio" name="display" id="rad-list" checked>
+                <label for="rad-list">Liste</label>
+                <input type="radio" name="display" id="rad-grid">
+                <label for="rad-grid">Cartes</label>
+            </fieldset>
+        </div>
+        <main>
+            <section id="students-list" aria-live="polite"></section>
             <noscript>Activez JavaScript pour voir la liste des étudiants.</noscript>
         </main>
         <script src="assets/scripts/main.js" type="module"></script>
