@@ -8,7 +8,12 @@ const JSON = await GetStudentsJSON();
 
 // retrieves the contents of promo.json (students)
 async function GetStudentsJSON() {
-    return await DataFetch();
+    try {
+        return await DataFetch();
+    } catch (error) {
+        console.error("Erreur lors du chargement des données :", error);
+        return null;
+    }
 }
 
 function start() {
